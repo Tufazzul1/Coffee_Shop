@@ -33,9 +33,9 @@
     --font-weight-bold: 700;
 
     /*Border radius */
-    --border-radius-s: 4px;
-    --border-radius-m: 30px;
-    --border-radius-circle: 50px;
+    --border-radius-s: 4%;
+    --border-radius-m: 30%;
+    --border-radius-circle: 50%;
 
     /*Site max width */
     --site-max-width: 1300px;
@@ -60,6 +60,29 @@ img {
     width: 100%;
 }
 
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-m);
+    background: var(--secondary-color);
+}
+
 /* Header style */
 
 header {
@@ -76,25 +99,22 @@ header .navbar {
     padding: 20px;
 }
 
-.section-content {
-    margin: 0px;
-    padding: 0 20px;
-    max-width: var(--site-max-width);
-}
+
 
 .navbar .nav-menu {
     display: flex;
     gap: 10px;
 }
 
-.navbar .nav-logo{
+.navbar .nav-logo {
     display: flex;
     gap: 5px;
     align-items: baseline;
 }
 
 
-.navbar .nav-logo .logo-text , .coffee-icon {
+.navbar .nav-logo .logo-text,
+.coffee-icon {
     color: var(--white-color);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
@@ -114,7 +134,7 @@ header .navbar {
     background-color: var(--secondary-color);
 }
 
-.navbar :where(#menu-close-button, #menu-open-button){
+.navbar :where(#menu-close-button, #menu-open-button) {
     display: none;
 }
 
@@ -191,16 +211,62 @@ header .navbar {
     margin-right: 30px;
 }
 
-/* About section */
-.about-section .section-content{
-    display: flex;
-    justify-content: space-batween;
 
+
+/* About section Styles */
+.about-section {
+    padding: 120px 50px;
+    background: var(--light-pink-color);
+}
+
+.about-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.about-section .about-details .section-title {
+    padding: 0;
+
+}
+
+.about-section .about-details {
+    max-width: 50%;
+}
+
+.about-section .social-link-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about-section .social-link-list .social-link {
+    color: var(--primary-color);
+    font-size: var(--font-size-l);
+    transition: 0.2s ease;
+}
+
+.about-section .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+}
+
+.about-section .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
 }
 
 @media screen and (max-width : 900px) {
 
-    body.show-mobile-menu header::before{
+    body.show-mobile-menu header::before {
         content: "";
         position: fixed;
         left: 0;
@@ -217,13 +283,13 @@ header .navbar {
         font-size: var(--font-size-l);
     }
 
-    .navbar #menu-close-button{
+    .navbar #menu-close-button {
         position: absolute;
         right: 30px;
         top: 30px;
     }
 
-    .navbar #menu-open-button{
+    .navbar #menu-open-button {
         color: white;
     }
 
@@ -242,7 +308,7 @@ header .navbar {
         transition: left 0.2s ease;
     }
 
-    body.show-mobile-menu .navbar .nav-menu{
+    body.show-mobile-menu .navbar .nav-menu {
         left: 0;
     }
 
@@ -257,7 +323,7 @@ header .navbar {
 
     /* Hero section resposive code */
 
-    .hero-section .section-content{
+    .hero-section .section-content {
         gap: 50px;
         text-align: center;
         padding: 30px 20px 20px;
@@ -270,12 +336,26 @@ header .navbar {
         margin-right: 0;
         margin-top: 30px;
     }
-    .hero-section  .hero-details .buttons{
+
+    .hero-section .hero-details .buttons {
         justify-content: center;
     }
 
-    .hero-section  .hero-details :is(.subtitle, .description){
+    .hero-section .hero-details :is(.subtitle, .description), .about-section .about-details {
         max-width: 100%;
+    }
+
+    /* about section style  */
+    .about-section .section-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
     }
 
 }
