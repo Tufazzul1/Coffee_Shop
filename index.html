@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Website</title>
+    <!-- link font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Link swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -154,19 +157,53 @@
                 Testimonial
             </h2>
             <div class="section-content">
-                <div class="slider-container">
+                <div class="slider-container swiper">
                     <div class="slider-wrapper">
-                        <ul class="testimonilas-list">
-                            <li class="testimonial">
+                        <ul class="testimonilas-list swiper-wrapper">
+                            <li class="testimonial swiper-slide">
                                 <img src="images/user-1.jpg" alt="User" class="user-image">
+                                <h3 class="name">Sarah Jonas</h3>
+                                <i class="feedback">Love the French roast. Perfectly banalnced and rich. Will order
+                                    again</i>
+                            </li>
+                            <li class="testimonial swiper-slide">
+                                <img src="images/user-2.jpg" alt="User" class="user-image">
+                                <h3 class="name">James Wilssone</h3>
+                                <i class="feedback">Love the French roast. Perfectly banalnced and rich. Will order
+                                    again</i>
+                            </li>
+                            <li class="testimonial swiper-slide">
+                                <img src="images/user-3.jpg" alt="User" class="user-image">
+                                <h3 class="name">Michel Brown</h3>
+                                <i class="feedback">Love the French roast. Perfectly banalnced and rich. Will order
+                                    again</i>
+                            </li>
+                            <li class="testimonial swiper-slide">
+                                <img src="images/user-4.jpg" alt="User" class="user-image">
+                                <h3 class="name">Emillie Harris</h3>
+                                <i class="feedback">Love the French roast. Perfectly banalnced and rich. Will order
+                                    again</i>
+                            </li>
+                            <li class="testimonial swiper-slide">
+                                <img src="images/user-5.jpg" alt="User" class="user-image">
+                                <h3 class="name">Anthony Thompson</h3>
+                                <i class="feedback">Love the French roast. Perfectly banalnced and rich. Will order
+                                    again</i>
                             </li>
                         </ul>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- custom js -->
     <script src="script.js"></script>
 </body>
 
