@@ -411,8 +411,8 @@ header .navbar {
 }
 
 
-/* Responsive design for width 900px */
-@media screen and (max-width : 900px) {
+/* Responsive design for width 800px */
+@media screen and (max-width : 800px) {
 
     body.show-mobile-menu header::before {
         content: "";
